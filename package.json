@@ -1,0 +1,23 @@
+{
+  "name": "taxonomi",
+  "version": "1.0.0",
+  "description": "This web aplication can save data about every living being on earth",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "express",
+    "node",
+    "tailwind",
+    "css",
+    "docker",
+    "postgres"
+  ],
+  "author": "Jesus Antonio Estrada Jimenez <@el_scriptor>, Angel Maldonado, Alex Amauri Marquez Canales, Aldo Tolentino Domingo",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
