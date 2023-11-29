@@ -1,5 +1,6 @@
 const express = require("express");
 const morgan =require("morgan");
+const {logErrors, errorHandler, boomErrorHandler } = require("./middlewares/errorHandler");
 const app = express();
 const port = process.env.PORT || 9222;
 
@@ -16,5 +17,12 @@ app.use(morgan("tiny"));
 app.get("/", (req, res) => {
     res.send("`<h1>Hola mundo</h1>`")
 }); 
+
+
+//Implementado los middlewares de tipo error; este tipo de middleware se hacen despues del routing
+app.use(logErrors);
+app.use(boomErrorHandler);
+app.use(errorHandler);
+app.use(queryErrorHandler);
 
 app.listen(port, () => console.log(`Ya estoy funcionando master en http://localhost:${port}`));

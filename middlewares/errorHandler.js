@@ -7,6 +7,7 @@ function logErrors(error, req, res, next)
     //Seguira con la ejecucion aunque lo este monitoreando
     next(error); // Lo estamos ejecutando como un middleware de tipo error proque le estoy enviando un error
   }
+
 //Middleware que detecta un error pero va a crear un formato para mi cliente
 const errorHandler = (error, req, res, next) =>
   {
@@ -15,7 +16,6 @@ const errorHandler = (error, req, res, next) =>
       stack: error.stack
     });
   } //La funcion next como parametro debo ponerla aunquen no la use, asi se detecta que es un middleware de tipo error
-
 
 //Cannot set headers adter they are sent to the client error comun en node, se soluiciona en la funcion boomErrorHandler agregando un else
 const boomErrorHandler = (error, req, res, next) =>
