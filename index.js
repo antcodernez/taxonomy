@@ -1,6 +1,7 @@
 const express = require("express");
 const morgan =require("morgan");
 const {logErrors, errorHandler, boomErrorHandler } = require("./middlewares/errorHandler");
+const {routerApi} = require("./routes/index.routes");
 const app = express();
 const port = process.env.PORT || 9222;
 
@@ -17,7 +18,7 @@ app.use(morgan("tiny"));
 app.get("/", (req, res) => {
     res.send("`<h1>Hola mundo</h1>`")
 }); 
-
+routerApi(app);
 
 //Implementado los middlewares de tipo error; este tipo de middleware se hacen despues del routing
 app.use(logErrors);
