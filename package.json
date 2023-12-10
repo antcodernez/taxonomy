@@ -4,7 +4,8 @@
   "description": "This web aplication can save data about every living being on earth",
   "main": "index.js",
   "scripts": {
-    "baby": "nodemon index.js"
+    "baby": "nodemon index.js",
+    "css": "postcss public/css/tailwind.css -o public/css/app.css --watch"
   },
   "keywords": [
     "javascript",
@@ -22,5 +23,11 @@
     "morgan": "^1.10.0",
     "nodemon": "^3.0.1",
     "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "postcss-cli": "^11.0.0",
+    "tailwind": "^4.0.0"
   }
 }
