@@ -1,0 +1,39 @@
+extends ../layout/index
+block  content 
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Index Parallax
+    link(rel="stylesheet", href="./style.css")
+  body
+    section
+      img(src="./public/img/homeImage/bg.jpg", alt="backgroud-estrellado", id="bg")
+      img(src="./public/img/homeImage/moon.png", alt="moon", id="moon")
+      img(src="./public/img/homeImage/mountain.png", alt="mountain", id="mountain")
+      img(src="./public/img/homeImage/road.png", alt="road", id="road")
+      h2(id="text") Taxonomy
+
+    .about-us
+      .about-image
+        img(src="./public/img/homeImage/pexels-thirdman-5256816.jpg", alt="Otra imagen")
+      .about-text
+        h2 Sobre Nosotros
+        p Hoy queremos compartir con ustedes un proyecto que está destinado a transformar la forma en que percibimos y utilizamos la iluminación urbana. Se trata de EcoLuz Urbana, una iniciativa innovadora que se apoya en la tecnología del Internet de las Cosas para crear luminarias inteligentes que no solo iluminan, sino que también se adaptan y optimizan en tiempo real.
+        button(onclick="openModal()", class="boton_modal") Ver más
+
+    #myModal.modal
+      .modal-content
+        span(onclick="closeModal()", style="float: right; cursor: pointer;") &times;
+        h2 Nuestra empresa se enfoca...
+        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat saepe nulla illo. A tempora magnam autem quibusdam cum magni iste, eius deserunt quidem neque adipisci, architecto perspiciatis! Ratione, porro fuga?
+
+    .contenedor
+      a(href="", class="btn btn-formulario btn-2") Explora Nuestro Mundo!
+        span
+        span
+
+    footer
+      p © 2023 Taxonomy. Todos los derechos reservados.
+
+    script(src="./public/js/homeScripts/code.js")
+    script(src="./public/js/homeScripts/aboutUs.js")
