@@ -1,10 +1,257 @@
-*
-    {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;   
-    }
 html
     {
         font-size: 62.5%;
     }    
+
+    *
+    {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Courier New', Courier, monospace;
+    }
+body
+    {
+        background: #0a2a43; 
+        min-height: 1500px;  
+    }
+section
+    {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+section::before
+    {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 100px;
+        background: linear-gradient(to  top, #0a2a43, transparent);
+        z-index: 10000;
+    }
+section::after
+    {
+        content: "";
+        position: absolute;
+        top:  0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background:#0a2a43;
+        z-index: 10000;
+        mix-blend-mode: soft-light;/* La propiedad CSS mix-blend-mode establece cómo el contenido de un elemento debe combinarse con el contenido del elemento principal y el fondo del elemento. */
+    }
+section img
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        pointer-events: none;
+    }
+#text
+    {
+        position: relative;
+        color: #fff;
+        font-size: 10em;
+        z-index: 1;
+    }
+#road
+    {
+    z-index: 2;
+    }
+    .about-us {
+        border-radius: 10px;
+        background-color:#001a2b;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 20px auto;
+        /* border: 2px solid black; */
+        box-shadow: 0px 0px 20px rgba(172, 221, 236, 0.877);
+        padding: 20px; /* Ajusta el relleno según sea necesario */
+        width: 80%;
+        max-width: 60%; /* Ajusta el ancho máximo según sea necesario */
+    }
+    
+    
+    .about-text {
+        text-align: left;
+        padding-left: 20px;
+        
+    }
+    
+    .about-text h2 {
+        font-size: 24px;
+        margin: 0;
+        color: #ffffff;
+        font-family: sans-serif;
+    }
+    
+    .about-text p {
+        font-size: 16px;
+        color: white;
+        font-family: sans-serif;
+        padding: 10px;
+    }
+    
+    .about-image img {
+        max-width: 200px;
+        height: auto;
+        margin-right: 20px;
+        color: white;
+    }
+    /*--------------------------------------------------------------Ventana Modal--------------------------------------*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    font-family: sans-serif;
+}
+
+/* Estilos para la animación de la ventana modal */
+.modal.fade-in {
+    display: block;
+    opacity: 1;
+}
+.boton_modal{
+    background-color: #ffffff;
+    /* background-color: #8d79ff; */
+    color: black;
+    border: 2px solid;
+    border-color: #24735c;
+    font-family: sans-serif;
+    /* border-radius: 7px; */
+    padding: 3px;
+}
+.boton_modal:hover{
+    background-color: #8ca1ff;
+    cursor: pointer;
+}
+
+/*-------------------------------------------------------------Informacion de la ventana Modal-----------------------------------------*/
+.modal-content h3{
+    text-align: justify;
+    font-style: bold;
+    font-family: sans-serif;
+
+}
+.modal-content h2{
+    color: #1b4c7a;
+    text-align: center;
+    font-family: sans-serif;
+}
+.modal-content h2:hover{
+    color: #2d7bc4;
+}
+.modal-content p{
+    font-family: sans-serif;
+}
+.modal-content h3:hover{
+    color: #525252;
+}
+
+/* --------------------------BOTON: EXPLORA NUESTRO MUNDO --------------------------- */
+
+.contenedor{
+    display: flex;
+    height: 30vh;
+    gap: 25px;
+    justify-content: space-around;
+    align-items: center;
+    font-family: sans-serif;
+}
+.btn{
+    position: relative;
+    padding: 20px 50px;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 8px;
+    transition: all 0.6s ease;
+}
+
+.btn-2{
+    border: 3px solid #fff;
+    background-color: #000b13;
+}
+.btn-2:hover{
+    background-color: #001a2b;
+    box-shadow: 0 0 20px #428ac2;
+}
+
+.btn-2 span:nth-child(n){
+    position: absolute;
+    width: 20px;
+    height: 18px;
+    border: 3px solid;
+    transition: all 0.6s ease;
+}
+
+.btn-2 span:nth-child(1){
+    right: 10%;
+    top: -10px;
+    background-color: #fff;
+}
+.btn-2 span:nth-child(2){
+    left: 10%;
+    bottom: -10px;
+    background-color: #001a2b;
+}
+
+.btn-2:hover span:nth-child(1){
+    right: 80%;
+    transform: rotate(90deg);
+    color: #428ac2;
+    background-color: #428ac2;
+    box-shadow: 0 0 4px #428ac2;
+}
+
+.btn-2:hover span:nth-child(2){
+    left: 80%;
+    transform: rotate(90deg);
+    background-color: #001a2b;
+    color: #428ac2;
+    box-shadow: 0 0 4px #428ac2;
+}
+
+/* ---------------------------FOOTER------------------------- */
+
+footer {
+    background-color: #001a2b;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 9999; /* Para asegurarse de que el footer esté encima de otros elementos */
+}
+footer p {
+    margin: 0;
+}
+
