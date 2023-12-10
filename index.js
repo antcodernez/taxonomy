@@ -15,6 +15,7 @@ app.use(morgan("tiny"));
 
 // app.use(express.static("public"));
 // app.use("/styles", express.static("public/styles", { "extensions": ["css"] }));
+app.use('/public', express.static('public', { 'Content-Type': 'text/css' }));
 
 app.get("/", (req, res) => {
     res.send("`<h1>Hola mundo</h1>`")
@@ -30,6 +31,6 @@ routerApi(app);
 app.use(logErrors);
 app.use(boomErrorHandler);
 app.use(errorHandler);
-app.use(queryErrorHandler);
+// app.use(queryErrorHandler);
 
 app.listen(port, () => console.log(`Ya estoy funcionando master en http://localhost:${port}`));
