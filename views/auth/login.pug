@@ -1,46 +1,6 @@
 extends ../layout/index
 
 block content
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title Document
-    link(rel="stylesheet", href="style.css")
-
-<<<<<<< HEAD
-block content
-         div.py-10
-          h1.text-center.text-4xl.font-extrabold.my-10(style="color: #DD6E42;") Real
-            span.font-normal.text-white Estate
-          h2.text-center.text-3xl.font-extrabold= page
-          if errors
-            each error, index in errors
-              div(class="bg-red-300 border-t-4 border-red-800 rounded-b text-teal-700 px-4 py-3 shadow-md mb-4" role="alert" id=`errorAlert-${index}`)
-                div(class="flex")
-                  div(class="py-1")
-                    svg(class="fill-current h-6 w-6 text-white mr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20")
-                      path(d='M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5')
-                  div
-                    p(class="font-bold" style="color: #4F6D7A")= error.msg
-          div.mt-8.mx-auto.max-w-md(style="transition: box-shadow 0.3s ease-in-out;")
-            .bg-white.py-8.px-4.shadow.rounded-2xl(
-              class="hover-effect",
-              style="background-color: #E8DAB2; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);",
-              onmouseover="this.style.boxShadow='0 4px 6px rgba(255, 165, 0, 0.5)'",
-              onmouseout="this.style.boxShadow='0 4px 6px rgba(0, 0, 0, 0.1)'"
-            )
-              form(action="/login/" method="POST" novalidate).space-y-5
-                div
-                  label.block.text-sm.uppercase.text-gray-500.mb-3.font-bold Your Email
-                  input#email.w-full.px-6.py-3.border.border-gray-800.rounded-md.placeholder-gray-400.mb-3(placeholder="Your Email" type="email" name="email")
-                div
-                  label.block.text-sm.uppercase.text-gray-500.mb-3.font-bold Your Password
-                  input#password.w-full.px-6.py-3.border.border-gray-800.rounded-md.placeholder-gray-400.mb-3(placeholder="Your Password" type="password" name="password")
-                div.flex.items-center.justify-between.mb-3
-                  a.text-gray-500.text-xs(href="/login/register", class="hover:text-gray-700 hover:underline") You still don't have an account? Create a
-                  a.text-gray-500.text-xs(href="/login/recovery", class="hover:text-gray-700 hover:underline") I forgot my password
-                input(class="w-full bg-blue-400 text-white font-bold py-3 cursor-pointer rounded-2xl transition-all ease-in-out duration-300 transform hover:scale-95 hover:bg-blue-600", type="submit", value="login")
-=======
   body
     
     header
@@ -78,4 +38,3 @@ block content
 
     script(type="module", src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js")
     script(nomodule, src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js")
->>>>>>> 00f7f9adeab04506d3633d2a2522fc0d5bba513d
