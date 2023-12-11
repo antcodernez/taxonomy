@@ -2,7 +2,7 @@ const express = require("express");
 
 const router = express.Router();
 
-router.get("/", (req, res) => {
+router.get("/", async (req, res) => {
    res.render('auth/login', {
             page: 'Iniciar Sesión',
             cssFile: "/public/css/lappLogin.css"

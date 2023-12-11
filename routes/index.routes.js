@@ -1,5 +1,5 @@
 const express = require("express");
-const userRouter = require("./userRouting"); 
+const userRouter = require("./user.routes"); 
 
 function routerApi(app) {
     const router = express.Router();
