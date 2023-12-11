@@ -2,8 +2,6 @@ const { Sequelize } = require("sequelize");
 const {config} = require("../config/config");
 const setupModels = require("../db/models/index.models");
 
-require("dotenv").config();
-
 const USER = encodeURIComponent(config.dbUser);
 const PASSWORD = encodeURIComponent(config.dbPassword);
 const URI = `${config.dbDialect}://${USER}:${PASSWORD}@${config.dbHost}:${config.dbPort}/${config.dbName}`;
