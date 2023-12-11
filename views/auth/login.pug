@@ -6,21 +6,21 @@ block content
     header
       h2.logo Logo
       nav.navigation
-        a(href="#") Home
+        a(href="#") Hogar
         a(href="#") Contactanos
-        button.btnLogin-popup Login
+        button.btnLogin-popup Inicio de Sesión
 
     .wrapper
       span.icon-close
         ion-icon(name="close-outline")
       .form-box.login
-        h2 Login
-        form(action="#")
+        h2 Inicio de Sesión
+        form(action="" method="POST" novalidate)
           .input-box
             span.icon
               ion-icon(name="mail-outline")
             input(type="email", required)
-            label(for="") Email
+            label(for="") Correo Electronico
           .input-box
             span.icon
               ion-icon(name="lock-closed-outline")
@@ -28,12 +28,12 @@ block content
             label(for="") Contraseña
           .remember-forgot
             label
-              .input(type="checkbox") Remember me 
-              a(href="#") Forgot Password?
-          button.btn(type="submit") Login
+              .input(type="checkbox") Recuerdame 
+              a(href="#") ¿Olvide mi Contraseña?
+          button.btn(type="submit") Iniciar Sesión
           .login-register
             p ¿No tienes una Cuenta?
-              a.register-link(href="#") Registrate
+              a.register-link(href="/auth/login/register") Registrate
 
     // Enlace al archivo CSS específico para esta vista
     link(rel='stylesheet', href=`${cssFile}`)
