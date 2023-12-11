@@ -1,5 +1,6 @@
 extends ../layout/index
-block  content 
+
+block content
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
@@ -50,6 +51,8 @@ block content
         button.btnLogin-popup Login
 
     .wrapper
+      span.icon-close
+        ion-icon(name="close-outline")
       .form-box.login
         h2 Login
         form(action="#")
