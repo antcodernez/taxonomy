@@ -1,7 +1,7 @@
 extends ../layout/index
 
 block content
-  body
+  
     
     header
       h2.logo Logo
@@ -15,11 +15,11 @@ block content
         ion-icon(name="close-outline")
       .form-box.login
         h2 Inicio de Sesión
-        form(action="" method="POST" novalidate)
+        form(action="auth/register" method="POST" novalidate)
           .input-box
             span.icon
               ion-icon(name="mail-outline")
-            input(type="email", required)
+            input(type="email" required )
             label(for="") Correo Electronico
           .input-box
             span.icon
@@ -33,10 +33,10 @@ block content
           button.btn(type="submit") Iniciar Sesión
           .login-register
             p ¿No tienes una Cuenta?
-              a.register-link(href="/auth/login/register") Registrate
+              a.register-link(href="/auth/register") Registrate
 
-    // Enlace al archivo CSS específico para esta vista
+    //- // Enlace al archivo CSS específico para esta vista
     link(rel='stylesheet', href=`${cssFile}`)
 
-    script(type="module", src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js")
-    script(nomodule, src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js")
+    //- script(type="module", src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js")
+    //- script(nomodule, src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js")

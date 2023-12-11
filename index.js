@@ -15,10 +15,10 @@ const app = express();
 app.use(express.urlencoded({extend:false}));
 
 //Habilitando lectura de datos de formulario
-app.use(cookieParser());
+// app.use(cookieParser());
 
-//habilidanto csurf
-app.use(csurf({cookie: true}));
+// //habilidanto csurf
+// app.use(csurf({cookie: true}));
 
 //Habilitanto morgan
 app.use(morgan("tiny"));

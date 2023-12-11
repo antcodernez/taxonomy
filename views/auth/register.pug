@@ -1,40 +1,32 @@
 extends ../layout/index
 
 block content
-  body
-
-    header
-      h2.logo Logo
-      nav.navigation
-        a(href="#") Home
-        a(href="#") Contactanos
-        button.btnLogin-popup Login
-
     .wrapper
       span.icon-close
         ion-icon(name="close-outline")
       .form-box.register
         h2 Registro
-        form(action="#" method="POST" novalidate)
+        form(action="register/" method="POST" novalidate)
+          //- input(type="hidden" name="_csrf" value= csrfToken)
           .input-box
-            span.icon
+            span.icon(for="name")
               ion-icon(name="person-outline")
-            input(type="text", required)
+            input(type="text", required id="name")
             label(for="") Nombre de Usuario
           .input-box
-            span.icon
+            span.icon(for="email")
               ion-icon(name="mail-outline")
-            input(type="email", required)
-            label(for="") Correo Electronico
+            input(type="email", required id="email")
+            label(for="email") Correo Electronico
           .input-box
-            span.icon
+            span.icon(for="password")
               ion-icon(name="lock-closed-outline")
-            input(type="password", required)
-            label(for="") Contraseña
+            input(type="password", required id="password")
+            label(for="password") Contraseña
           .input-box
-            span.icon
+            span.icon(for="password-repeat")
               ion-icon(name="repeat-outline")
-            input(type="password", required)
+            input(type="password", required id="password-repeat")
             label(for="") Repite tu Contraseña
           .remember-forgot
             label
@@ -44,6 +36,7 @@ block content
           .login-register
             p ¿Ya tienes una Cuenta?
               a.register-link(href="/auth/login") Inicia Sesión
+
       link(rel='stylesheet', href=`${cssFile}`)
 
     script(type="module", src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js")

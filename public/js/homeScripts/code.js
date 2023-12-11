@@ -15,22 +15,22 @@ window.addEventListener("scroll", () => {
 });
 
 // script.js
-setInterval(() => {
-    function getRandomColor() {
-        const letters = '0123456789ABCDEF';
-        let color = '#';
-        for (let i = 0; i < 6; i++) {
-          color += letters[Math.floor(Math.random() * 16)];
-        }
-        return color;
-      }
+// setInterval(() => {
+//     function getRandomColor() {
+//         const letters = '0123456789ABCDEF';
+//         let color = '#';
+//         for (let i = 0; i < 6; i++) {
+//           color += letters[Math.floor(Math.random() * 16)];
+//         }
+//         return color;
+//       }
       
-      const textColor = text.textContent;  
-      // Crear un array de caracteres envueltos en <span>
+//       const textColor = text.textContent;  
+//       // Crear un array de caracteres envueltos en <span>
       
-      const coloredText = [...textColor].map(char => `<span>${char}</span>`).join('');
+//       const coloredText = [...textColor].map(char => `<span>${char}</span>`).join('');
       
-      // Asignar colores aleatorios a cada <span>
-        const coloredTextWithColors = coloredText.replace(/<span>/g, '<span style="color: ' + getRandomColor() + ';">');
-      text.innerHTML = coloredTextWithColors;
-}, 1000);
+//       // Asignar colores aleatorios a cada <span>
+//         const coloredTextWithColors = coloredText.replace(/<span>/g, '<span style="color: ' + getRandomColor() + ';">');
+//       text.innerHTML = coloredTextWithColors;
+// }, 1000);
