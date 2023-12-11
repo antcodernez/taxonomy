@@ -1,20 +1,30 @@
 const express = require("express");
 const morgan =require("morgan");
+const csurf = require("csurf"); 
+const cookieParser = require("cookie-parser"); 
+
 const {logErrors, errorHandler, boomErrorHandler } = require("./middlewares/errorHandler");
 const {routerApi} = require("./routes/index.routes");
-const port = process.env.PORT || 9222;
 
+const port = process.env.PORT || 9222;
 const app = express();
 //definiendo morgan para inspeccionar el server
 
-app.use(express.json());
+// app.use(express.json());
 
-app.use(express.urlencoded({extended:false}));
+app.use(express.urlencoded({extend:false}));
 
+//Habilitando lectura de datos de formulario
+app.use(cookieParser());
+
+//habilidanto csurf
+app.use(csurf({cookie: true}));
+
+//Habilitanto morgan
 app.use(morgan("tiny"));
 
-// app.use(express.static("public"));
-// app.use("/styles", express.static("public/styles", { "extensions": ["css"] }));
+// configurando los archivos MIME para el css
+
 app.use('/public', express.static('public', { 'Content-Type': 'text/css' }));
 
 app.get("/", (req, res) => {
@@ -23,12 +33,14 @@ app.get("/", (req, res) => {
     });
 }); 
 
+// Habilitando pug
 app.set("view engine", "pug");
 app.set("views", "./views");
 
+//Carpeta publica
 app.use(express.static('public'));
 
-
+//Roting
 routerApi(app);
 
 
