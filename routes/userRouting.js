@@ -9,6 +9,11 @@ router.get("/", (req, res) => {
         })
 });
 
-router.get('/', (request, response) => response.render("layout/index.pug", {page:"home"}));
+router.post("/", (req, res) => {
+   res.render('auth/login', {
+            page: 'Iniciar Sesión',
+            // csrfToken: req.csrfToken()
+        })
+});
 
 module.exports = router;

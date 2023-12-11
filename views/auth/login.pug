@@ -1,5 +1,12 @@
 extends ../layout/index
+block  content 
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+    link(rel="stylesheet", href="style.css")
 
+<<<<<<< HEAD
 block content
          div.py-10
           h1.text-center.text-4xl.font-extrabold.my-10(style="color: #DD6E42;") Real
@@ -32,3 +39,40 @@ block content
                   a.text-gray-500.text-xs(href="/login/register", class="hover:text-gray-700 hover:underline") You still don't have an account? Create a
                   a.text-gray-500.text-xs(href="/login/recovery", class="hover:text-gray-700 hover:underline") I forgot my password
                 input(class="w-full bg-blue-400 text-white font-bold py-3 cursor-pointer rounded-2xl transition-all ease-in-out duration-300 transform hover:scale-95 hover:bg-blue-600", type="submit", value="login")
+=======
+  body
+    
+    header
+      h2.logo Logo
+      nav.navigation
+        a(href="#") Home
+        a(href="#") Contactanos
+        button.btnLogin-popup Login
+
+    .wrapper
+      .form-box.login
+        h2 Login
+        form(action="#")
+          .input-box
+            span.icon
+              ion-icon(name="mail-outline")
+            input(type="email", required)
+            label(for="") Email
+          .input-box
+            span.icon
+              ion-icon(name="lock-closed-outline")
+            input(type="password", required)
+            label(for="") Contraseña
+          .remember-forgot
+            label
+              input(type="checkbox") Remember me
+              | 
+              a(href="#") Forgot Password?
+          button.btn(type="submit") Login
+          .login-register
+            p ¿No tienes una Cuenta?
+              a.register-link(href="#") Registrate
+
+    script(type="module", src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js")
+    script(nomodule, src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js")
+>>>>>>> 00f7f9adeab04506d3633d2a2522fc0d5bba513d

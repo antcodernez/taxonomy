@@ -25,6 +25,7 @@ app.set("views", "./views");
 
 app.use(express.static('public'));
 
+
 routerApi(app);
 
 //Implementado los middlewares de tipo error; este tipo de middleware se hacen despues del routing

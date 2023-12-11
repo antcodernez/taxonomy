@@ -2,8 +2,7 @@ html
     {
         font-size: 62.5%;
     }    
-
-    *
+*
     {
         padding: 0;
         margin: 0;
@@ -87,6 +86,8 @@ section img
     .about-text {
         text-align: left;
         padding-left: 20px;
+        display: grid;
+        place-items: center
         
     }
     
@@ -102,6 +103,7 @@ section img
         color: white;
         font-family: sans-serif;
         padding: 10px;
+
     }
     
     .about-image img {
@@ -139,15 +141,15 @@ section img
     display: block;
     opacity: 1;
 }
-.boton_modal{
+.boton_modal {
     background-color: #ffffff;
-    /* background-color: #8d79ff; */
     color: black;
-    border: 2px solid;
-    border-color: #24735c;
+    border: 2px solid #24735c;
     font-family: sans-serif;
-    /* border-radius: 7px; */
-    padding: 3px;
+    border-radius: 15px; /* Redondea los bordes del botón */
+    padding: 10px 20px; /* Ajusta el relleno interno del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Agrega una transición suave */
 }
 .boton_modal:hover{
     background-color: #8ca1ff;
