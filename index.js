@@ -22,6 +22,7 @@ app.get("/", (req, res) => {
         cssFile: '/public/css/app.css'
     });
 }); 
+
 app.set("view engine", "pug");
 app.set("views", "./views");
 
@@ -29,6 +30,7 @@ app.use(express.static('public'));
 
 
 routerApi(app);
+
 
 //Implementado los middlewares de tipo error; este tipo de middleware se hacen despues del routing
 app.use(logErrors);
