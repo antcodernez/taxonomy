@@ -26,14 +26,17 @@ block content
               ion-icon(name="lock-closed-outline")
             input(type="password", required)
             label(for="") Contraseña
-          //- .remember-forgot
-          //-   label
-          //-     input(type="checkbox") Remember me 
-          //-     a(href="#") Forgot Password?
+          .remember-forgot
+            label
+              .input(type="checkbox") Remember me 
+              a(href="#") Forgot Password?
           button.btn(type="submit") Login
           .login-register
             p ¿No tienes una Cuenta?
               a.register-link(href="#") Registrate
+
+    // Enlace al archivo CSS específico para esta vista
+    link(rel='stylesheet', href=`${cssFile}`)
 
     script(type="module", src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js")
     script(nomodule, src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js")
