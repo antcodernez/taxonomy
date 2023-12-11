@@ -3,6 +3,7 @@ const morgan =require("morgan");
 const csurf = require("csurf"); 
 const cookieParser = require("cookie-parser"); 
 
+const {config} = require("./config/config");
 const {logErrors, errorHandler, boomErrorHandler } = require("./middlewares/errorHandler");
 const {routerApi} = require("./routes/index.routes");
 
@@ -50,4 +51,5 @@ app.use(boomErrorHandler);
 app.use(errorHandler);
 // app.use(queryErrorHandler);
 
-app.listen(port, () => console.log(`Ya estoy funcionando master en http://localhost:${port}`));
+app.listen(port, () => console.log(`Ya estoy funcionando master en http://localhost:${port}
+${config.dbName}`));

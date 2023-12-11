@@ -1,4 +1,4 @@
-const {Model, Datatypes, Sequelize} = require("sequelize");
+const {Model, DataTypes, Sequelize} = require("sequelize");
 
 const USER_TABLE = "tb_users";
 

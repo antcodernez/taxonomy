@@ -1,15 +1,17 @@
 const { Sequelize } = require("sequelize");
 const {config} = require("../config/config");
-const setupModels = require("../db/models");
+const setupModels = require("../db/models/index.models");
+
+require("dotenv").config();
 
 const USER = encodeURIComponent(config.dbUser);
 const PASSWORD = encodeURIComponent(config.dbPassword);
-const URI = `postgres://${USER}:${PASSWORD}@${config.dbHost}:${config.dbPort}/${config.dbName}`;
+const URI = `${config.dbDialect}://${USER}:${PASSWORD}@${config.dbHost}:${config.dbPort}/${config.dbName}`;
 
 //const URI = "mysql://tester:tucola23@localhost:3306/my_store";
 
 const sequelize = new Sequelize(URI, {
-  dialect: "postgres",
+  dialect: config.dbDialect,
 }); // el va a usar el pooling por detras
 
 //se corre despues de crear la instancia
