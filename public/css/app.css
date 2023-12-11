@@ -257,3 +257,69 @@ footer p {
     margin: 0;
 }
 
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    /* Ejemplo de ajustes */
+    body {
+        font-size: 14px; /* Reducción del tamaño de fuente */
+    }
+
+    .about-us {
+        width: 90%;
+        max-width: 100%;
+        margin: 10px auto; /* Ajuste del margen */
+    }
+
+    .about-text h2 {
+        font-size: 20px; /* Reducción del tamaño de fuente para títulos */
+    }
+
+    .about-text p {
+        font-size: 14px; /* Reducción del tamaño de fuente para texto */
+    }
+
+    /* Otros ajustes necesarios para dispositivos móviles */
+}
+
+
+/* Estilos para tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Ejemplo de ajustes */
+    .about-us {
+        width: 80%;
+        max-width: 100%;
+        margin: 20px auto; /* Ajuste del margen */
+    }
+
+    .about-text h2 {
+        font-size: 22px; /* Ajustes en el tamaño de fuente */
+    }
+
+    .about-text p {
+        font-size: 16px; /* Ajustes en el tamaño de fuente */
+    }
+
+    /* Otros ajustes necesarios para tablets */
+}
+
+
+/* Estilos para pantallas más grandes (escritorio) */
+@media (min-width: 1025px) {
+    /* Ejemplo de ajustes */
+    .about-us {
+        width: 60%; /* Cambios en el ancho del contenedor principal */
+        margin: 40px auto; /* Ajuste del margen */
+    }
+
+    .about-text h2 {
+        font-size: 28px; /* Ajustes en el tamaño de fuente */
+    }
+
+    .about-text p {
+        font-size: 18px; /* Ajustes en el tamaño de fuente */
+    }
+
+    /* Otros ajustes necesarios para pantallas más grandes */
+}
+
