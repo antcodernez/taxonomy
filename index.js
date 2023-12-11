@@ -18,7 +18,7 @@ app.use(morgan("tiny"));
 app.use('/public', express.static('public', { 'Content-Type': 'text/css' }));
 
 app.get("/", (req, res) => {
-    res.render('auth/home')
+    res.render('layout/home');
 }); 
 app.set("view engine", "pug");
 app.set("views", "./views");
