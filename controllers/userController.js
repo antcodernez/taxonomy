@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const { check, validationResult }= require ("express-validator");
 const { generatedID, jwtToken } =require("../lib/tokens.js");
 const bcrypt = require("bcrypt");
@@ -16,3 +17,21 @@ const formLogin = (req, res) => {
       };
 
 module.exports = {formLogin, formRegister}
+=======
+const formRegister = async( req, res) => {
+    res.render('auth/register', {
+            page: 'Crear cuenta',
+            cssFile: "/public/css/appRegister.css",
+            // csrfToken: req.csrfToken()
+        });
+}
+
+const registerUser = async (req, res) => {
+    console.log(req.body);
+}
+
+module.exports = {
+    formRegister,
+    registerUser
+};
+>>>>>>> 6c3f8e99264cf9b860a970f4e7d5944044c08cb5

@@ -1,4 +1,5 @@
-require("dotenv").config();
+const dotenv = require("dotenv");
+dotenv.config({path:".env"})
 
 const config = {
     env: process.env.NODE_ENV || "dev",
@@ -7,7 +8,8 @@ const config = {
     dbPassword: process.env.DB_PASSWORD,
     dbHost: process.env.DB_HOST,
     dbName: process.env.DB_NAME,
-    dbPort: process.env.DB_PORT
+    dbPort: process.env.DB_PORT,
+    dbDialect: process.env.DB_DIALECT
 };
 
 module.exports = {config}
