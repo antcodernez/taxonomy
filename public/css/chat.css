@@ -120,7 +120,6 @@ form
         margin: 0 auto;
         padding: 10px;
         background: #121545;
-    
         display: flex;
         flex-direction: row;
         gap: 10px;
@@ -132,11 +131,9 @@ textarea
     
         color: #fff;
         font-size: 18px;
-    
         padding: 10px;
         background: transparent;
-        border-radius: 5px;
-        border: none;
+        border-radius: 15px;
         outline: none;
     }
   

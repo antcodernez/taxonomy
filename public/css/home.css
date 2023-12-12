@@ -80,7 +80,7 @@ ul.Sidebar li a:hover {
 header.micro-header {
   background-color: #00011a;
   color: #fff;
-  padding: 40px;
+  padding: 15px;
   width: 100%;
   display: flex;
   place-content: center;
@@ -154,7 +154,7 @@ nav.MainMenu ul.Sidebar li a {
   .bxs-chevrons-right{
     font-size: 2.5rem;
     cursor: pointer;
-    
+
   }
   /* Media query para dispositivos móviles */
 @media (max-width: 767px) {

@@ -310,7 +310,7 @@ footer p {
     /* Ejemplo de ajustes */
     .about-us {
         width: 60%; /* Cambios en el ancho del contenedor principal */
-        margin: 40px auto; /* Ajuste del margen */
+        margin: 100px auto; /* Ajuste del margen */
     }
 
     .about-text h2 {
