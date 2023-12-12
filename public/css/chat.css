@@ -1,7 +1,7 @@
 
 #app 
     {
-        width: 32vw;
+        width: 25vw;
         height: 100vh;
         background: #0f2c4f;
         z-index: 100;
@@ -119,7 +119,7 @@ form
         max-width: 1280px;
         margin: 0 auto;
         padding: 10px;
-        background: #40414F;
+        background: #121545;
     
         display: flex;
         flex-direction: row;
