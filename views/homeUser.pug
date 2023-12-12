@@ -5,15 +5,16 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     link(rel="stylesheet", href="/public/css/home.css", type="text/css")
     link(rel="stylesheet", href="/public/css/chat.css", type="text/css")
+    link(href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css', rel='stylesheet')
     title index
   body.body
     .Layout
         div#app
             #chat_container 
             form(action="")
-                textarea(name="prompt", cols="1", rows="1" placeholder="Preguntame carnal!!")
+                textarea(name="prompt", cols="1", rows="1" placeholder="En que te ayudo")
                 button(type="sumit")
-                img(src="public/")  
+                i.bx.bxs-chevrons-right(style='color:#ffffff')
         nav.MainMenu
             a.img(href="#")
                 img.img(src="/public/img/icons/logo.jpg", alt="Logo Empresa")
@@ -30,9 +31,8 @@ html(lang="en")
             .chat-continer
         .Layout-top
             header.micro-header
-            .module
                 .search-box
-                input(type="text", placeholder="¿Qué deseas descubrir?")
+                    input(type="text", placeholder="¿Qué deseas descubrir?")
                 
         main.Layout-main
         .MobileBottomBar
