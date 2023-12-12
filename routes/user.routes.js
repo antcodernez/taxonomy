@@ -1,19 +1,15 @@
 // userRouting.js
 const express = require("express");
 const router = express.Router();
-const { formRegister, registerUser } = require("../controllers/userController");
+const { formRegister, registerUser, formLogin } = require("../controllers/userController");
 
-router.get("/login", async (req, res) => {
-   res.render('auth/login', {
-            page: 'Iniciar Sesión',
-            cssFile: "/public/css/lappLogin.css",
-            // csrfToken: req.csrfToken()
-        })
-});
+
+
+router.get("/login", formLogin);
 
 // Nueva ruta para mostrar la página de registro
 router.get("/register", formRegister);
+router.post('/register', registerUser);
 
-router.post("/register", registerUser);
 
 module.exports = router;

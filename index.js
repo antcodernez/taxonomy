@@ -11,9 +11,10 @@ const port = process.env.PORT || 9222;
 const app = express();
 //definiendo morgan para inspeccionar el server
 
-// app.use(express.json());
+app.use(express.json());
 
-app.use(express.urlencoded({extend:false}));
+app.use(express.urlencoded({ extended: true }));
+
 
 //Habilitando lectura de datos de formulario
 // app.use(cookieParser());
@@ -26,13 +27,23 @@ app.use(morgan("tiny"));
 
 // configurando los archivos MIME para el css
 
-app.use('/public', express.static('public', { 'Content-Type': 'text/css' }));
+app.use('/public', express.static('public', { 'Content-Type': '/public/css/app.css' }));
 
 app.get("/", (req, res) => {
     res.render('layout/home',{
         cssFile: '/public/css/app.css'
     });
 }); 
+
+app.post("/registerUser", (req, res) => {
+    // Tu código de manejo de la solicitud POST aquí
+    const { name, email, password} = req.body;
+    // Validación y otras operaciones...
+
+    // Ejemplo de respuesta
+    res.json({ message: "Registro exitoso", user: { name, email, password } });
+});
+
 
 // Habilitando pug
 app.set("view engine", "pug");
