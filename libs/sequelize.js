@@ -4,6 +4,7 @@ const {setupModels} = require("../db/models/index.models");
 
 const USER = encodeURIComponent(config.dbUser);
 const PASSWORD = encodeURIComponent(config.dbPassword);
+
 const URI = `${config.dbDialect}://${USER}:${PASSWORD}@${config.dbHost}:${config.dbPort}/${config.dbName}`;
 
 //const URI = "mysql://tester:tucola23@localhost:3306/my_store";
