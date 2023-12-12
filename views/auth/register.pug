@@ -4,9 +4,10 @@ block content
     .wrapper
       span.icon-close
         ion-icon(name="close-outline")
+      
       .form-box.register
         h2 Registro
-        form(action="register/" method="POST" novalidate)
+        form(action="auth/register" method="POST" novalidate)
           //- input(type="hidden" name="_csrf" value= csrfToken)
           .input-box
             span.icon(for="name")

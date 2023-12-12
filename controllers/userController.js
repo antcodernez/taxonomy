@@ -1,3 +1,4 @@
+const {models} = require("../libs/sequelize");
 const formRegister = async( req, res) => {
     res.render('auth/register', {
             page: 'Crear cuenta',
@@ -6,8 +7,18 @@ const formRegister = async( req, res) => {
         });
 }
 
-const registerUser = async (req, res) => {
-    console.log(req.body);
+const registerUser = async (req, res, next) => {
+    try
+        {
+            const body = req.body;
+            console.log(newUser);
+            const newUser = await models.User.create(body); //metodo crea un nuevo usuario
+            // res.redirect("auth/login");
+        }
+    catch(e)
+        {
+            next(e);
+        }
 }
 
 module.exports = {
