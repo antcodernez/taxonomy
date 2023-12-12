@@ -1,13 +1,10 @@
-body
-    {
-        background-color: #5436DA;
-    }
+
 #app 
     {
         width: 32vw;
         height: 100vh;
-        background: #343541;
-    
+        background: #0f2c4f;
+        z-index: 100;
         display: flex;
         flex-direction: column;
         align-items: center;

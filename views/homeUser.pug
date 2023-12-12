@@ -1,9 +1,43 @@
 doctype html
 html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Bienvenido
-        link(rel="stylesheet",href="/public/css/home.css" type="text/css")
-    body 
-        header 
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="/public/css/home.css", type="text/css")
+    link(rel="stylesheet", href="/public/css/chat.css", type="text/css")
+    title index
+  body.body
+    .Layout
+        div#app
+            #chat_container 
+            form(action="")
+                textarea(name="prompt", cols="1", rows="1" placeholder="Preguntame carnal!!")
+                button(type="sumit")
+                img(src="public/")  
+        nav.MainMenu
+            a.img(href="#")
+                img.img(src="/public/img/icons/logo.jpg", alt="Logo Empresa")
+            ul.Sidebar
+                li.Sidebar-item
+                    a.Sidebar-item-navegation.isActive(href="#" id="inicioBtn") Inicio
+                li.Sidebar-item
+                    a.Sidebar-item-navegation.isActive(href="#" id="mapaBtn") Mapa
+                li.Sidebar-item
+                    a.Sidebar-item-navegation.isActive(href="#" id="publicarBtn") Publicar
+                li.Sidebar-item
+                    a.Sidebar-item-navegation.isActive(href="#" id="registrosBtn") Mis registros
+        aside.Layout-right
+            .chat-continer
+        .Layout-top
+            header.micro-header
+            .module
+                .search-box
+                input(type="text", placeholder="¿Qué deseas descubrir?")
+                
+        main.Layout-main
+        .MobileBottomBar
+        a(href="#" id="inicioBtn") Inicio
+        a(href="#" id="mapaBtn") Mapa
+        a(href="#" id="publicarBtn") Publicar
+        a(href="#" id="publicarBtn") Mis registros
+        block content
