@@ -9,10 +9,14 @@ const UserSchema = {
         primaryKey: true,
         type: DataTypes.INTEGER
       },
+      name:{
+        type: DataTypes.STRING(255),
+        allowNull: false
+      },
       email: {
         allowNull: false,
         type: DataTypes.STRING,
-        unique: true
+        unique: true,
       },
       password: {
         allowNull: false,

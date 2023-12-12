@@ -16,31 +16,30 @@ block content
       
       .form-box.register
         h2 Registro
-        form(action="auth/register" method="POST" novalidate)
+        form(action="/register" method="POST" novalidate)
           //- input(type="hidden" name="_csrf" value= csrfToken)
           .input-box
             span.icon(for="name")
               ion-icon(name="person-outline")
-            input(type="text", required id="name")
-            label(for="") Nombre de Usuario
+            input(type="text", required id="name", name="name")
+            label(for="name") Nombre de Usuario
           .input-box
             span.icon(for="email")
               ion-icon(name="mail-outline")
-            input(type="email", required id="email")
+            input(type="email", required, id="email", name="email")
             label(for="email") Correo Electronico
           .input-box
             span.icon(for="password")
               ion-icon(name="lock-closed-outline")
-            input(type="password", required id="password")
+            input(type="password", required, id="password" name="password")
             label(for="password") Contraseña
           .input-box
             span.icon(for="password-repeat")
               ion-icon(name="repeat-outline")
-            input(type="password", required id="password-repeat")
-            label(for="") Repite tu Contraseña
+            input(type="password", required, id="password-repeat", name="password-repeat")
+            label(for="password-repeat") Repite tu Contraseña
           .remember-forgot
             label
-              .input(type="checkbox") Recuérdame
               a(href="#") ¿Olvidé mi contraseña?
           button.btn(type="submit") Registrarme
           .login-register

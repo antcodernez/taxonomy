@@ -15,7 +15,7 @@ block content
         ion-icon(name="close-outline")
       .form-box.login
         h2 Inicio de Sesión
-        form(action="auth/register" method="POST" novalidate)
+        form(action="/login/" method="POST" novalidate)
           .input-box
             span.icon
               ion-icon(name="mail-outline")
@@ -28,7 +28,6 @@ block content
             label(for="") Contraseña
           .remember-forgot
             label
-              .input(type="checkbox") Recuerdame 
               a(href="#") ¿Olvide mi Contraseña?
           button.btn(type="submit") Iniciar Sesión
           .login-register
